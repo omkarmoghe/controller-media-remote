@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Controller Media Remote",
+  "version": "0.0.1",
+  "description": "Control media on various websites with a game controller.",
+  "icons": {
+    "48": "icons/controller.svg",
+    "96": "icons/controller.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.mozilla.org/*",
+        "*://*.netflix.com/*",
+        "*://*.amazon.com/*",
+        "*://*.hbogo.com/*",
+        "*://*.hbonow.com/*",
+        "*://*.disneyplus.com/*"
+      ],
+      "js": [
+        "controller_manager.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "icons/*.svg"
+  ],
+  "browser_action": {
+    "default_icon": "icons/controller.svg",
+    "default_title": "Controller Media Remote"
+  }
+}
