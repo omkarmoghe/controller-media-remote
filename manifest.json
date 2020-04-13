@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Controller Media Remote",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Control media on various websites with a game controller.",
   "icons": {
     "48": "icons/controller.svg",
