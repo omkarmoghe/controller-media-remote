@@ -1,0 +1,4 @@
+#popup-container {
+  disply: flex;
+  flex-direction: column;
+}

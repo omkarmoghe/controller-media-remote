@@ -56,10 +56,10 @@ const ACTIONS = {
     video.fastSeek(Math.min(video.currentTime + 10, video.duration));
   },
   "Volume up": (video) => {
-    video.volume = Math.min(video.volume + .1, 1);
+    video.volume = Math.min(video.volume + 0.1, 1);
   },
   "Volume down": (video) => {
-    video.volume = Math.max(video.volume - .1, 0);
+    video.volume = Math.max(video.volume - 0.1, 0);
   },
   "Mute": (video) => {
     video.muted = !video.muted;
@@ -69,7 +69,7 @@ const ACTIONS = {
 let gamepads = [];
 let frame;
 
-function debounce(func, wait = 100, immediate = false) {
+function debounce(func, wait = 250, immediate = true) {
   var timeout;
   return function () {
     var context = this, args = arguments;
@@ -90,7 +90,7 @@ const dispatchKey = debounce((action) => {
   if (videoElem) {
     action(videoElem);
   }
-}, 250, true);
+});
 
 function buttonListener(gamepadButton, index) {
   if (gamepadButton.pressed || gamepadButton.value > 0.0) {

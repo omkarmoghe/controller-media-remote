@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Controller Media Remote",
-  "version": "0.0.2",
-  "description": "Control media on various websites with a game controller.",
+  "name": "__MSG_extensionName__",
+  "version": "0.0.3",
+  "description": "__MSG_extensionDescription__",
   "icons": {
     "48": "icons/controller.svg",
     "96": "icons/controller.svg"
@@ -26,6 +26,8 @@
   ],
   "browser_action": {
     "default_icon": "icons/controller.svg",
-    "default_title": "Controller Media Remote"
-  }
+    "default_title": "__MSG_extensionName__",
+    "default_popup": "popup/mapping.html"
+  },
+  "default_locale": "en"
 }
